@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+    <header>
+        ROCK, PAPER, SCISSORS
+    </header>
+        <div class="info" id="info">
+            Select your choice and press PLAY!
+        </div>
+        <div class="input-buttons">
+            <button class="inputs" id="rock" onclick="setRock(); disabling()"> &#9994;</button>
+            <button class="inputs" id="paper" onclick="setPaper(); disabling()">&#9995;</button>
+            <button class="inputs" id="scissors" onclick="setScissors(); disabling()">&#9984;</button>
+        </div>
+        <div class="play-button">
+            <button class="inputs" id="play-button" onclick="opponent() ; decider()" disabled>Play</button>
+            <button class="inputs " id="new-button" onclick="activating()" disabled>New</button>
+        </div>
+        <div>
+            <table>
+                <th>Opponent</th>
+                <th>Your choice</th>
+                <tr>
+                    <td id="opponent-choice">-</td>
+                    <td id="user-choice">-</td>
+                </tr>
+            </table>
+        </div>
+        <div class="result" id="result">
+        </div>
+
+    </main>
+    <script>
+        let userChoice = document.getElementById('user-choice');
+        let oppositionChoice = document.getElementById('opponent-choice');
+        let playButton = document.getElementById('play-button');
+        let rock = document.getElementById('rock');
+        let paper = document.getElementById('paper');
+        let scissors = document.getElementById('scissors');
+        let newButton = document.getElementById('new-button');
+        let info = document.getElementById('info');
+        let result = document.getElementById('result');
+        let valueCheck;
+        let random;
+
+        // making functions to set input
+        const setRock = () => {
+            userChoice.innerHTML = "&#9994;";
+            valueCheck = '&#9994;';
+        }
+        const setPaper = () => {
+            userChoice.innerHTML = "&#9995;";
+            valueCheck = '&#9995;';
+        }
+        const setScissors = () => {
+            userChoice.innerHTML = "&#9984;";
+            valueCheck = '&#9984;';
+        }
+
+        // Activating and deactivating BUTTONS according to user's choices
+        const disabling = () => {
+            playButton.removeAttribute('disabled');
+            info.innerHTML = "Select your choice and press PLAY!"
+        }
+
+        const activating = () => {
+            // playButton.removeAttribute('disabled');
+            rock.removeAttribute('disabled');
+            paper.removeAttribute('disabled');
+            scissors.removeAttribute('disabled');
+            newButton.setAttribute('disabled' , '')
+
+            userChoice.innerHTML = "-";
+            oppositionChoice.innerHTML = "-";
+            info.innerHTML = "NEW GAME STARTED. <br> Select your choice and press PLAY!"
+            result.innerHTML = "";
+        }
+
+        const opponent = () => {
+            const strings = ['&#9994;', '&#9995;', '&#9984;', '&#9984;','&#9995;','&#9994;', '&#9995;' , '&#9984;' ,'&#9994;'];
+            random = strings[Number.parseInt(Math.floor((Math.random() * 9)))];
+            console.log(random);
+            oppositionChoice.innerHTML = random;
+
+            playButton.setAttribute('disabled', '')
+            rock.setAttribute('disabled', '')
+            paper.setAttribute('disabled', '')
+            scissors.setAttribute('disabled', '')
+            newButton.removeAttribute('disabled');
+        }
+
+        const decider = ()=>{
+            if( valueCheck == "&#9994;" && random == "&#9995;"){
+                result.innerHTML = "You LOST!!";
+            } else if(valueCheck == "&#9995;" && random == "&#9994;"){
+                result.innerHTML = "You WON!!";
+            } else if(valueCheck == "&#9995;" && random == "&#9984;"){
+                result.innerHTML = "You LOST!!";
+            } else if(valueCheck == "&#9984;" && random == "&#9995;"){
+                result.innerHTML = "You WON!!";
+            } else if(valueCheck == "&#9984;" && random == "&#9994;"){
+                result.innerHTML = "You LOST!!";
+            } else if(valueCheck == "&#9994;" && random == "&#9984;"){
+                result.innerHTML = "You WON!!";
+            } else {
+                activating();
+                result.innerHTML = "TIE!!"
+            }
+        }
+    </script>
+</body>
+
+</html>

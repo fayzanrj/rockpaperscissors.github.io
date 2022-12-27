@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* color: white; */
+}
+
+header, .result{
+    color: white;
+}
+ th , td {
+    border: 1px solid rgba(230,54,157,255);
+    text-align: center;
+    color: white;
+    background-color: rgba(6,10,71,255);
+}
+
+main{
+    display: flex;
+    height: 100vh;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    background-image: url('https://miro.medium.com/max/1000/0*pwDqZoXvHo79MoT7.png');
+    background-position: center;
+    background-size: cover;
+}
+
+header{
+    font-size: 2.3rem;
+    margin: 45px 0 20px 0;
+    font-style: italic;
+    color: rgba(230,54,157,255);
+    background-color: rgba(6,10,71,255);
+}
+main .info{
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 20px 0 30px 0;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: monospace;
+    color: rgba(6,10,71,255);
+    background-color: rgba(230,54,157,255);
+}
+
+.inputs {
+    width: 90px;
+    /* height: 30px; */
+    margin: 10px;
+    padding: 2px;
+    font-size: 1.5rem;
+    font-family: monospace;
+    font-weight: bolder;
+    color: rgba(255,200,61,255);
+    box-shadow: 10px 5px rgba(6,10,71,255);
+    background-color: rgba(6,10,71,255);
+    border-color:rgba(6,10,180) ;
+}
+
+#play-button , #new-button{
+    color: rgba(230,54,157,255);
+}
+table{
+    width: 300px;
+    height: 100px;
+    margin: 20px;
+    background-color: rgba(6,10,71,255);
+}
+
+.result{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px 0;
+    background-color: rgba(230,54,157,255);
+}
+
+tr{
+    font-size: 2.5rem;
+    color: rgba(255,200,61,255);
+}
+
+th{
+    font-size: 1rem;
+}
+
+button:disabled , #new-button:disabled , #play-button:disabled{
+    opacity: 0.35;
+}
+
+
+
+@media screen and (max-width:750px) {
+    main{
+        background-image: url('bg-cell.png');
+    }
+    
+    header{
+        font-size: 1.9rem;
+    }
+}
