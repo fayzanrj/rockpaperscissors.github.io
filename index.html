@@ -17,6 +17,14 @@
         <div class="info" id="info">
             Select your choice and press PLAY!
         </div>
+        <div class="scores" >
+            <div class="opponent-score" id="opponent-score">
+                
+            </div>
+            <div class="user-score" id="user-score">
+
+            </div>
+        </div>
         <div class="input-buttons">
             <button class="inputs" id="rock" onclick="setRock(); disabling()"> &#9994;</button>
             <button class="inputs" id="paper" onclick="setPaper(); disabling()">&#9995;</button>
@@ -50,6 +58,10 @@
         let newButton = document.getElementById('new-button');
         let info = document.getElementById('info');
         let result = document.getElementById('result');
+        let opponentScore = document.getElementById('opponent-score');
+        let userScore = document.getElementById('user-score');
+        let userActualScore = 0; 
+        let opponentActualScore = 0; 
         let valueCheck;
         let random;
 
@@ -102,16 +114,28 @@
         const decider = ()=>{
             if( valueCheck == "&#9994;" && random == "&#9995;"){
                 result.innerHTML = "You LOST!!";
+                opponentActualScore++;
+                opponentScore.innerHTML = "Opponent's Score : " + opponentActualScore;
             } else if(valueCheck == "&#9995;" && random == "&#9994;"){
                 result.innerHTML = "You WON!!";
+                userActualScore++;
+                userScore.innerHTML = "Your Score : " + userActualScore;
             } else if(valueCheck == "&#9995;" && random == "&#9984;"){
                 result.innerHTML = "You LOST!!";
+                opponentActualScore++;
+                opponentScore.innerHTML = "Opponent's Score : " + opponentActualScore;
             } else if(valueCheck == "&#9984;" && random == "&#9995;"){
                 result.innerHTML = "You WON!!";
+                userActualScore++;
+                userScore.innerHTML = "Your Score : " + userActualScore;
             } else if(valueCheck == "&#9984;" && random == "&#9994;"){
                 result.innerHTML = "You LOST!!";
+                opponentActualScore++;
+                opponentScore.innerHTML = "Opponent's Score : " + opponentActualScore;
             } else if(valueCheck == "&#9994;" && random == "&#9984;"){
                 result.innerHTML = "You WON!!";
+                userActualScore++;
+                userScore.innerHTML = "Your Score : " + userActualScore;
             } else {
                 activating();
                 result.innerHTML = "TIE!!"
