@@ -32,6 +32,17 @@ header{
     color: rgba(230,54,157,255);
     background-color: rgba(6,10,71,255);
 }
+
+.scores{
+    width: 300px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    font-weight: bold;
+    color: rgba(6,10,71,255);
+    background-color: rgba(230,54,157,255);
+    padding: 10px;
+}
 main .info{
     text-align: center;
     font-size: 1.1rem;
