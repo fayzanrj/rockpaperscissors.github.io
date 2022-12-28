@@ -37,7 +37,7 @@ header {
     font-weight:900;
     margin: 45px 0 20px 0;
     font-style: italic;
-    background-image:linear-gradient(to right, rgba(230, 54, 157, 255) , rgba(255, 200, 61, 255), rgba(230, 54, 157, 255));
+    background-image:linear-gradient(to right, rgba(255, 200, 61, 255),rgba(230, 54, 157, 255) ,  rgba(230, 54, 157, 255));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
