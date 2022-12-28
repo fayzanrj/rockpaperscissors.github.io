@@ -115,11 +115,5 @@ button:disabled , #new-button:disabled , #play-button:disabled{
     
     header{
         font-size: 1.9rem;
-    }
-
-    #scissors{
-        font-size: 2rem;
-        padding:1px;
-    }
-    
+    }    
 }
