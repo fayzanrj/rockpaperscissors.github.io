@@ -119,7 +119,7 @@ button:disabled , #new-button:disabled , #play-button:disabled{
 
     #scissors{
         font-size: 2rem;
-        padding:0;
+        padding:1px;
     }
     
 }
