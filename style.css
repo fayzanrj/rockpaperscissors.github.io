@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@700&family=Nabla&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -27,6 +29,8 @@ main{
 
 header{
     font-size: 2.3rem;
+    font-family: 'Aref Ruqaa Ink', serif;
+    /* font-family: 'Nabla', cursive; */
     margin: 45px 0 20px 0;
     font-style: italic;
     color: rgba(230,54,157,255);
@@ -60,6 +64,7 @@ main .info{
     /* height: 30px; */
     margin: 10px;
     padding: 2px;
+    /* font-size: 0px; */
     font-size: 1.5rem;
     font-family: monospace;
     font-weight: bolder;
@@ -111,4 +116,9 @@ button:disabled , #new-button:disabled , #play-button:disabled{
     header{
         font-size: 1.9rem;
     }
+
+    #scissors{
+        font-size: 2rem;
+    }
+    
 }
